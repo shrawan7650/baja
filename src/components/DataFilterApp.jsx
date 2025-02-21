@@ -14,7 +14,7 @@ export default function DataFilterApp() {
       if (!parsedInput.data || !Array.isArray(parsedInput.data)) {
         throw new Error("Invalid JSON format");
       }
-      const res = await fetch("http://localhost:5000/bfhl", {
+      const res = await fetch("https://bajabackend.onrender.com/bfhl", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(parsedInput),
